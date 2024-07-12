@@ -1,8 +1,8 @@
 import MapboxMaps
 
-extension Expression {
+extension MapboxMaps.Expression {
     
-    static func routeLineWidthExpression(_ multiplier: Double = 1.0) -> Expression {
+    static func routeLineWidthExpression(_ multiplier: Double = 1.0) -> MapboxMaps.Expression {
         return Exp(.interpolate) {
             Exp(.linear)
             Exp(.zoom)
@@ -26,7 +26,7 @@ extension Expression {
         }
     }
     
-    static func buildingExtrusionHeightExpression(_ hightProperty: String) -> Expression {
+    static func buildingExtrusionHeightExpression(_ hightProperty: String) -> MapboxMaps.Expression {
         return Exp(.interpolate) {
             Exp(.linear)
             Exp(.zoom)
