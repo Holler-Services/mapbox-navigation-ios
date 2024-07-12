@@ -10,7 +10,7 @@ extension MapboxMaps.Expression {
         }
     }
     
-    static func routeLineGradientExpression(_ gradientStops: [Double: UIColor], lineBaseColor: UIColor, isSoft: Bool = false) -> Expression {
+    static func routeLineGradientExpression(_ gradientStops: [Double: UIColor], lineBaseColor: UIColor, isSoft: Bool = false) -> MapboxMaps.Expression {
         if isSoft {
             return Exp(.interpolate) {
                 Exp(.linear)
